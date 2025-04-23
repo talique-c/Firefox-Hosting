@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Jersey+15&display=swap");
+
+h1, h3 {
+    font-family: 'Jersey 15', sans-serif;
+    text-transform: lowercase;
+}
+
+.summary {
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.LinkText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: transparent;
+    user-select: none;
+}
+
+/* YOUTUBE */
+a[href="https://www.youtube.com/"] .LinkText {
+    background-image: url('http://localhost:8000/purple-flower.png');
+}
+
+a[href="https://www.youtube.com/"]::after {
+    content: "youtube";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* NETFLIX */
+a[href="https://www.netflix.com/browse"] .LinkText {
+    background-image: url('http://localhost:8000/pink-flower.png');
+}
+
+a[href="https://www.netflix.com/browse"]::after {
+    content: "netflix";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* GMAIL */
+a[href="https://mail.google.com/mail/u/1/#inbox"] .LinkText {
+    background-image: url('http://localhost:8000/light-pink-flower.png');
+}
+
+a[href="https://mail.google.com/mail/u/1/#inbox"]::after {
+    content: "gmail";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+.LinkText:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Spinning Effect */
+.summary > i svg {
+    animation: spin 16s linear infinite; /* Adjust the speed (4s) to your preference */
+}
+
+/* Define the spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
