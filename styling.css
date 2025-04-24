@@ -91,7 +91,7 @@ a[href="https://mail.google.com/mail/u/1/#inbox"]::after {
 
 /* CHATGPT */
 a[href="https://chatgpt.com/"] .LinkText {
-    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/orange-flower.png");
+    background-image: url("https://github.com/talique-c/Firefox-Hosting/blob/main/icons/orange-flower.png");
     animation: iconFadeIn 0.8s ease-out;
 }
 
@@ -107,7 +107,7 @@ a[href="https://chatgpt.com/"]::after {
 
 /* PINTEREST */
 a[href="https://www.pinterest.com/"] .LinkText {
-    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/pink-tulip.png");
+    background-image: url("https://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/pink-tulip.png");
     animation: iconFadeIn 0.8s ease-out;
 }
 
@@ -121,9 +121,9 @@ a[href="https://www.pinterest.com/"]::after {
     font-size: 18px;
 }
 
-/* PINTEREST */
+/* GOOGLE DOCS */
 a[href="https://docs.google.com/document/u/0/"] .LinkText {
-    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/blue-flower.png");
+    background-image: url("https://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/blue-flower.png");
     animation: iconFadeIn 0.8s ease-out;
 }
 
