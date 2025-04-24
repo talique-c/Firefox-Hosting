@@ -9,6 +9,23 @@ h1, h3 {
     font-family: 'Pixelify Sans', sans-serif;
 }
 
+.summary > span {
+    pointer-events: none;
+}
+
+.Links {
+    display: grid !important;
+    gap: 0.5em;
+}
+
+.Links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
 .LinkText {
     display: flex;
     flex-direction: column;
@@ -21,11 +38,13 @@ h1, h3 {
     transition: background-color 0.3s ease, transform 0.2s ease;
     color: transparent;
     user-select: none;
+    pointer-events: auto;
 }
 
 /* YOUTUBE */
 a[href="https://www.youtube.com/"] .LinkText {
-    background-image: url('http://localhost:8000/purple-flower.png');
+    background-image: url('https://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/purple-flower.png');
+    animation: iconFadeIn 0.8s ease-out;
 }
 
 a[href="https://www.youtube.com/"]::after {
@@ -40,7 +59,8 @@ a[href="https://www.youtube.com/"]::after {
 
 /* NETFLIX */
 a[href="https://www.netflix.com/browse"] .LinkText {
-    background-image: url('http://localhost:8000/pink-flower.png');
+    background-image: url('https://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/yellow-flower.png');
+    animation: iconFadeIn 0.8s ease-out;
 }
 
 a[href="https://www.netflix.com/browse"]::after {
@@ -55,7 +75,8 @@ a[href="https://www.netflix.com/browse"]::after {
 
 /* GMAIL */
 a[href="https://mail.google.com/mail/u/1/#inbox"] .LinkText {
-    background-image: url('http://localhost:8000/light-pink-flower.png');
+    background-image: url('https://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/light-pink-flower.png');
+    animation: iconFadeIn 0.8s ease-out;
 }
 
 a[href="https://mail.google.com/mail/u/1/#inbox"]::after {
@@ -68,16 +89,60 @@ a[href="https://mail.google.com/mail/u/1/#inbox"]::after {
     font-size: 18px;
 }
 
-.LinkText:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+/* CHATGPT */
+a[href="https://chatgpt.com/"] .LinkText {
+    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/orange-flower.png");
+    animation: iconFadeIn 0.8s ease-out;
 }
 
-/* Spinning Effect */
+a[href="https://chatgpt.com/"]::after {
+    content: "chatgpt";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* PINTEREST */
+a[href="https://www.pinterest.com/"] .LinkText {
+    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/pink-tulip.png");
+    animation: iconFadeIn 0.8s ease-out;
+}
+
+a[href="https://www.pinterest.com/"]::after {
+    content: "pinterest";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* PINTEREST */
+a[href="https://docs.google.com/document/u/0/"] .LinkText {
+    background-image: url("://raw.githubusercontent.com/talique-c/Firefox-Hosting/refs/heads/main/icons/blue-flower.png");
+    animation: iconFadeIn 0.8s ease-out;
+}
+
+a[href="https://docs.google.com/document/u/0/"]::after {
+    content: "docs";
+    color: white;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px;
+}
+
+/*-- ANIMATIONS & HOVER-- */
+/* Spinning Sun */
 .summary > i svg {
-    animation: spin 16s linear infinite; /* Adjust the speed (4s) to your preference */
+    animation: spin 35s linear infinite;
 }
 
-/* Define the spin animation */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -85,4 +150,23 @@ a[href="https://mail.google.com/mail/u/1/#inbox"]::after {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes iconFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.02);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+}    
+
+.LinkText:hover {
+    transform: scale(1.1); /* Enlarge icon on hover */
+    filter: drop-shadow(0 0 6px rgba(255, 192, 203, 0.2));
 }
